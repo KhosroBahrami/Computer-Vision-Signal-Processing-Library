@@ -28,10 +28,6 @@ using namespace std;
 
 void fft(int N, int offset, int delta, double xt[][2], double xf[][2], double x[][2]);
 
-
-
-
-
 // FFT 
 extern "C" void fft_CPU(int N, double xt[][2], double xf[][2])
 {
@@ -40,8 +36,6 @@ extern "C" void fft_CPU(int N, double xt[][2], double xf[][2])
   // Calculate FFT 
   fft(N, 0, 1, xt, xf, x);
 }
-
-
 
 // IFFT 
 extern "C" void ifft_CPU(int N, double xt[][2], double xf[][2])
@@ -65,8 +59,6 @@ extern "C" void ifft_CPU(int N, double xt[][2], double xf[][2])
       xt[N-i][1] = tmp1;
     }
 }
-
-
 
 // FFT calculation via recursion
 void fft(int N, int offset, int delta, double xt[][2], double xf[][2], double x[][2])
